@@ -1279,7 +1279,7 @@ describe('Table', () => {
     });
 
     it('should render the load more element with the expected attributes', () => {
-      let {getAllByRole} = render(<LoadingMoreTable isLoading />);
+      let {getAllByRole} = render(<LoadingMoreTable isLoadingMore />);
 
       let rows = getAllByRole('row');
       expect(rows).toHaveLength(6);
@@ -1291,7 +1291,7 @@ describe('Table', () => {
     });
 
     it('should not focus the load more row when using ArrowDown', async () => {
-      let {getAllByRole} = render(<LoadingMoreTable isLoading />);
+      let {getAllByRole} = render(<LoadingMoreTable isLoadingMore />);
 
       let rows = getAllByRole('row');
       let loader = rows[5];
@@ -1313,7 +1313,7 @@ describe('Table', () => {
     });
 
     it('should not focus the load more row when using End', async () => {
-      let {getAllByRole} = render(<LoadingMoreTable isLoading />);
+      let {getAllByRole} = render(<LoadingMoreTable isLoadingMore />);
 
       let rows = getAllByRole('row');
       let loader = rows[5];
@@ -1330,7 +1330,7 @@ describe('Table', () => {
     });
 
     it('should not focus the load more row when using PageDown', async () => {
-      let {getAllByRole} = render(<LoadingMoreTable isLoading />);
+      let {getAllByRole} = render(<LoadingMoreTable isLoadingMore />);
 
       let rows = getAllByRole('row');
       let loader = rows[5];
